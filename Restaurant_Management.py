@@ -81,37 +81,37 @@ item1_breakfast = Image.open("imgs/idli.png")
 item1_breakfast = item1_breakfast.resize((150,150))
 idli = ImageTk.PhotoImage(item1_breakfast)
 item1 = Button(window, image=idli)
-item1.place(x=100,y=180)
+item1.place(x=100,y=150)
 
 item2_breakfast = Image.open("imgs/dosa.png")
 item2_breakfast = item2_breakfast.resize((150,150))
 dosa = ImageTk.PhotoImage(item2_breakfast)
 item2 = Button(window, image=dosa)
-item2.place(x=300,y=180)
+item2.place(x=300,y=150)
 
 item3_breakfast = Image.open("imgs/poha.png")
 item3_breakfast = item3_breakfast.resize((150,150))
 poha = ImageTk.PhotoImage(item3_breakfast)
 item3 = Button(window, image=poha)
-item3.place(x=500,y=180)
+item3.place(x=500,y=150)
 
 item4_breakfast = Image.open("imgs/poori.png")
 item4_breakfast = item4_breakfast.resize((150,150))
 poori = ImageTk.PhotoImage(item4_breakfast)
 item4 = Button(window, image=poori)
-item4.place(x=100,y=450)
+item4.place(x=100,y=430)
 
 item5_breakfast = Image.open("imgs/upma.png")
 item5_breakfast = item5_breakfast.resize((150,150))
 upma = ImageTk.PhotoImage(item5_breakfast)
 item5 = Button(window, image=upma)
-item5.place(x=300,y=450)
+item5.place(x=300,y=430)
 
 item6_breakfast = Image.open("imgs/paneer_paratha.png")
 item6_breakfast = item6_breakfast.resize((150,150))
 paneer_paratha = ImageTk.PhotoImage(item6_breakfast)
 item6 = Button(window, image=paneer_paratha)
-item6.place(x=500,y=450)
+item6.place(x=500,y=430)
 
 # # lunch images 
 iteam1_lunch = Image.open("imgs/rice.png")
@@ -164,18 +164,18 @@ iteam6_snacks = iteam6_snacks.resize((150,150))
 sandal = ImageTk.PhotoImage(iteam6_snacks)
 
 # label or food items names
-item1_name = Label(window, text='Idli - Rs.30', font=("",20))
-item1_name.place(x=100,y=150)
-item2_name = Label(window, text='Dosa - Rs.40', font=("",20))
-item2_name.place(x=300,y=150)
-item3_name = Label(window, text='Poha - Rs.40', font=("",20))
-item3_name.place(x=500,y=150)
-item4_name = Label(window, text='Poori - Rs.40', font=("",20))
-item4_name.place(x=100,y=420)
-item5_name = Label(window, text='Upma - Rs.30', font=("",20))
-item5_name.place(x=300,y=420)
-item6_name = Label(window, text='Paneer Paratha - Rs.50', font=("",20))
-item6_name.place(x=500,y=420)
+item1_name = Label(window, text='Idli - Rs.30', font=("",16))
+item1_name.place(x=110,y=310)
+item2_name = Label(window, text='Dosa - Rs.40', font=("",16))
+item2_name.place(x=310,y=310)
+item3_name = Label(window, text='Poha - Rs.40', font=("",16))
+item3_name.place(x=510,y=310)
+item4_name = Label(window, text='Poori - Rs.40', font=("",16))
+item4_name.place(x=110,y=590)
+item5_name = Label(window, text='Upma - Rs.30', font=("",16))
+item5_name.place(x=310,y=590)
+item6_name = Label(window, text='Paneer Paratha - Rs.50', font=("",16))
+item6_name.place(x=510,y=590)
 
 def show_items(val):
     if (val == 1):
@@ -238,33 +238,27 @@ dinner.place(x=520,y=70)
 
 
 # -------------- Spinbox to get the items -----------------
-sv1=IntVar()
-sb1 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2,textvariable=sv1)
+sb1 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2)
 sb1.place(x=150,y=350)
 sb.append(sb1)
 
-sv2=IntVar()
-sb2 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2,textvariable=sv2)
+sb2 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2)
 sb2.place(x=350,y=350)
 sb.append(sb2)
 
-sv3=IntVar()
-sb3 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2,textvariable=sv3)
+sb3 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2)
 sb3.place(x=550,y=350)
 sb.append(sb3)
 
-sv4=IntVar()
-sb4 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2,textvariable=sv4)
+sb4 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2)
 sb4.place(x=150,y=630)
 sb.append(sb4)
 
-sv5=IntVar()
-sb5 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2,textvariable=sv5)
+sb5 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2)
 sb5.place(x=350,y=630)
 sb.append(sb5)
 
-sv6=IntVar()
-sb6 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2,textvariable=sv6)
+sb6 = Spinbox(window,from_=0,to_=10,font=('Times',20,'normal'),width=2)
 sb6.place(x=550,y=630)
 sb.append(sb6)
 
@@ -320,36 +314,37 @@ def final_bill():
     # ------------- labels to show the total cost -----------------
     # label to show the Cost
     cost['text'] = "Cost : "
-    cost.place(x=900,y=500)
+    cost.place(x=900,y=400)
     cost_display['text'] = total
-    cost_display.place(x=1000,y=500)
+    cost_display.place(x=1000,y=400)
 
     # label to show the tax %
     tax["text"] = "Tax % : "
-    tax.place(x=900,y=550)
+    tax.place(x=900,y=450)
     tax_display['text'] = '10%'
-    tax_display.place(x=1000,y=550)
+    tax_display.place(x=1000,y=450)
 
     # label to show the total cost
     total_cost['text']="Total Cost : "
-    total_cost.place(x=900,y=600)
+    total_cost.place(x=900,y=500)
     final_total = total+(total/10)
     total_cost_display['text'] = final_total
-    total_cost_display.place(x=1050,y=600)
+    total_cost_display.place(x=1050,y=500)
 
 
 getbill = Button(window, text="Get Bill", font=("",20), command=final_bill)
-getbill.place(x=250,y=700)
+getbill.place(x=300,y=700)
 
 
 # -------------------- Reset --------------------
 # function of reset
 
 def resetbill():
-    # global total, item_listbox, price_listbox, qty_listbox, total_listbox
+    global total, final_total
 
     messagebox.showinfo("Total Cost",f"Total Cost : {final_total}")
     total = 0
+    final_total = 0
     for item in table.get_children():
         table.delete(item)
 
@@ -360,8 +355,8 @@ def resetbill():
     tax_display['text'] = ''
     total_cost_display['text'] = ''
 
-reset_bill = Button(window, text="Conform(Reset Bill)", font=("",20), command=resetbill)
-reset_bill.place(x=400, y=700)
+reset_bill = Button(window, text="Reset Bill", font=("",20), command=resetbill)
+reset_bill.place(x=500, y=700)
 
 
 # -------------------- Exit --------------------
@@ -371,17 +366,20 @@ def close_window():
 
 
 exit_window = Button(window, text="Close", font=("",20), command=close_window)
-exit_window.place(x=650,y=700)
+exit_window.place(x=1000,y=700)
 
 
 # -------------------- Remove ------------------
 # function to remove item
 # deleting the values in a table
 def delete_items():
-    for item in table.selection():
-        table.delete(item)
+    global total
+    for i in table.selection():
+        total -= table.item(i)['values'][3]
+        table.delete(i)
+    
 
-# table.bind('<Delete>',delete_items) 
+table.bind('<Delete>',delete_items) 
 
 remove_item = Button(window, text="Remove Item" , font=("",20), command=delete_items)
 remove_item.place(x=980,y=340)
