@@ -52,18 +52,6 @@ table.heading('qty',text="Qty")
 table.heading('price', text='Price' )
 table.heading('total_price',text='Total' )
 
-# inserting value into a table
-# for i in range(len(breakfast_menu)):
-#     pass
-
-
-# # funtion to select items in a table
-# def item_select(_):
-#     for i in table.selection():
-#         pass
-
-# table.bind('<<TreeviewSelect>>', item_select)
-
 table.place(x=900,y=100)
 
 
@@ -274,8 +262,6 @@ final_total = 0
 # funtion to add the bills
 def add_bill():
     global v, total, table
-    # global sv1
-    # sv1['value_'] = 0
     if v.get() == 0:
         for i in range(6):
             if int(sb[i].get()) != 0:
@@ -338,11 +324,10 @@ getbill.place(x=300,y=700)
 
 # -------------------- Reset --------------------
 # function of reset
-
 def resetbill():
     global total, final_total
 
-    messagebox.showinfo("Total Cost",f"Total Cost : {final_total}")
+    messagebox.showinfo("Total Cost",f"Total Cost : {final_total}\nSee you again\n Have a nice Day :)")
     total = 0
     final_total = 0
     for item in table.get_children():
@@ -371,12 +356,15 @@ exit_window.place(x=1000,y=700)
 
 # -------------------- Remove ------------------
 # function to remove item
-# deleting the values in a table
 def delete_items():
     global total
     for i in table.selection():
         total -= table.item(i)['values'][3]
         table.delete(i)
+    cost_display['text'] = total
+    final_total = total+(total/10)
+    total_cost_display['text'] = final_total
+
     
 
 table.bind('<Delete>',delete_items) 
